@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY Quiz</title>
+    <link rel="stylesheet" href="lib/EASY.CSS">
+  
+    </head>
+    
+    <body>
+        <div class="editor">
+<div class="editor__wrapper">
+    <div class="editor__body">
+        <div id = "editorCode" 
+        class="editor__code">
+        </div>
+        <div class="editor__footer">
+            <div class="editor__footer--left">
+              <button class="editor__btn editor__run">Run ></button>
+              <button class="editor__btn editor__reset">Reset ></button>
+            </div>
+            <div class="editor__footer--right">
+                <div class="editor__console"></div>
+                <ul class="editor__contole_logs"></ul>
+            </div>
+        </div>
+    </div>
+</div>  
+        </div>
+
+        
+     <!--- required ace libraries-->   
+<script src="lib/js/ace-editor/src-min/ace.js"></script>
+<script src="lib/js/ace-editor/src-min/mode-javascript.js"></script>
+<script src="lib/js/ace-editor/src-min/ext-language_tools.js"></script>
+<!--CUSTOM SCRIPTS-->
+<script src="lib/js/EASY.JS"></script>
+
+    </body>
+</html>

@@ -1,0 +1,161 @@
+/* Variables */
+:root {
+    --editor-bg: #222;
+    --editor-border: #00bfae;
+    --text-color: #ddd;
+    --button-bg: #00bfae;
+    --button-hover: #ff6f61;
+    --console-bg: #1e1e1e;
+}
+.ace_autocomplete {
+    z-index: 10000 !important;
+  }
+/* Reset styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.ace_autocomplete {
+    z-index: 9999 !important;
+  }
+  
+html, body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor {
+    width: 60%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Editor Wrapper */
+.editor__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--editor-bg);
+    padding: 1.5em;
+    border-radius: 10px;
+    border: 2px solid var(--editor-border);
+    box-shadow: 0 10px 30px rgba(0, 191, 174, 0.3);
+}
+
+/* Editor Body */
+.editor__body {
+    flex: 1;
+    background: var(--console-bg);
+    border-radius: 5px;
+    border: 1px solid var(--editor-border);
+    color: var(--text-color);
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Footer */
+.editor__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.editor__footer--left {
+    display: flex;
+    flex-direction: column;
+}
+
+.editor__footer--right {
+    flex: 1;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+/* Buttons */
+.editor__btn {
+    border: 0;
+    padding: 0.7em;
+    background: var(--button-bg);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 120px;
+    text-transform: uppercase;
+}
+
+.editor__btn:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Console */
+.editor__console {
+    background-color: var(--console-bg);
+    width: 100%;
+    height: 130px;
+    margin-top: 1em;
+    border-radius: 5px;
+    border: 1px solid var(--editor-border);
+    color: var(--text-color);
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Code Area */
+.editor__code {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--editor-border);
+    border-radius: 5px;
+    background: var(--console-bg);
+    color: var(--text-color);
+    padding: 10px;
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00bfae, #ff6f61); /* Gradient color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff6f61, #00bfae); /* Gradient changes on hover */
+}
+
+/* Line Numbers Styling (if using a Code Editor like CodeMirror) */
+.cm-gutters {
+    background: #222;
+    color: #00bfae;
+    border-right: 2px solid #00bfae;
+}
+
+/* Adjusts padding for numbers */
+.cm-linenumber {
+    color: #ff6f61;
+    font-weight: bold;
+}
